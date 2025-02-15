@@ -25,7 +25,7 @@ function jeuFacil(){
         let reponse =prompt(`Vous avez ${i} essais pour deviner le nombre entre 0 et 40 :`);
         reponse=parseInt(reponse);
         //console.log(reponse);
-        if(reponse===NaN)alert("donner un entier valide");
+        if(isNaN(reponse))alert("donner un entier valide");
         else if (reponse ===LeNombreCache){alert("gagné"); break;}
         else if (reponse<LeNombreCache){alert("trop petit");
         }
@@ -53,7 +53,7 @@ function jeuIntermediaire(){
         let reponse =prompt(`Vous avez ${i} essais pour deviner le nombre entre 0 et 100 :`);
         reponse=parseInt(reponse);
         //console.log(reponse);
-        if(reponse===NaN)alert("donner un entier valide");
+        if(isNaN(reponse))alert("donner un entier valide");
         else if (reponse ===LeNombreCache){alert("gagné"); break;}
         else if (reponse<LeNombreCache){alert("trop petit");
         }
@@ -81,7 +81,7 @@ function jeuDifficil(){
         let reponse =prompt(`Vous avez ${i} essais pour deviner le nombre entre 0 et 250 :`);
         reponse=parseInt(reponse);
         //console.log(reponse);
-        if(reponse===NaN)alert("donner un entier valide");
+        if(isNaN(reponse))alert("donner un entier valide");
         else if (reponse ===LeNombreCache){alert("gagné"); break;}
         else if (reponse<LeNombreCache){alert("trop petit");
         }
