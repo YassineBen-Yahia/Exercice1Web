@@ -6,7 +6,7 @@ button.addEventListener('click',function(){
         case "facile":
             jeuFacil();
             break;
-        case "intermediaire":
+        case "intermediare":
             jeuIntermediaire();
             break;
         case "difficil":
@@ -22,7 +22,7 @@ function jeuFacil(){
     console.log(LeNombreCache);
     const nombreDEssai=10;
     for(i=nombreDEssai;i>=0;i--){
-        let reponse =prompt(`Vous avez ${i} essais pour deviner le nombre entre 0 et 40 :`);
+        let reponse =prompt(`Vous avez ${i} essais pour deviner le nombre entre 0 et 50 :`);
         reponse=parseInt(reponse);
         //console.log(reponse);
         if(isNaN(reponse))alert("donner un entier valide");
