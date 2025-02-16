@@ -21,7 +21,7 @@ function jeuFacil(){
     const LeNombreCache=Math.floor(Math.random() * 50) ;
     console.log(LeNombreCache);
     const nombreDEssai=10;
-    for(i=nombreDEssai;i>=0;i--){
+    for(i=nombreDEssai;i>0;i--){
         let reponse =prompt(`Vous avez ${i} essais pour deviner le nombre entre 0 et 50 :`);
         reponse=parseInt(reponse);
         //console.log(reponse);
@@ -49,7 +49,7 @@ function jeuIntermediaire(){
     const LeNombreCache=Math.floor(Math.random() * 100) ;
     console.log(LeNombreCache);
     const nombreDEssai=6;
-    for(i=nombreDEssai;i>=0;i--){
+    for(i=nombreDEssai;i>0;i--){
         let reponse =prompt(`Vous avez ${i} essais pour deviner le nombre entre 0 et 100 :`);
         reponse=parseInt(reponse);
         //console.log(reponse);
@@ -77,7 +77,7 @@ function jeuDifficil(){
     const LeNombreCache=Math.floor(Math.random() * 250) ;
     console.log(LeNombreCache);
     const nombreDEssai=4;
-    for(i=nombreDEssai;i>=0;i--){
+    for(i=nombreDEssai;i>0;i--){
         let reponse =prompt(`Vous avez ${i} essais pour deviner le nombre entre 0 et 250 :`);
         reponse=parseInt(reponse);
         //console.log(reponse);
