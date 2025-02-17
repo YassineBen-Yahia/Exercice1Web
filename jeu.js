@@ -21,17 +21,7 @@ function jeuFacil(){
     const LeNombreCache=Math.floor(Math.random() * 50) ;
     console.log(LeNombreCache);
     const nombreDEssai=10;
-    for(i=nombreDEssai;i>0;i--){
-        let reponse =prompt(`Vous avez ${i} essais pour deviner le nombre entre 0 et 50 :`);
-        reponse=parseInt(reponse);
-        //console.log(reponse);
-        if(isNaN(reponse))alert("donner un entier valide");
-        else if (reponse ===LeNombreCache){alert("gagné"); break;}
-        else if (reponse<LeNombreCache){alert("trop petit");
-        }
-        else alert("trop grand");
-
-    }
+    jouer(nombreDEssai,50,LeNombreCache);
     let rejouer=prompt("reprondre le jeu? ecrire oui ou non");
     if (rejouer==="oui"){
         jeuFacil();
@@ -49,17 +39,7 @@ function jeuIntermediaire(){
     const LeNombreCache=Math.floor(Math.random() * 100) ;
     console.log(LeNombreCache);
     const nombreDEssai=6;
-    for(i=nombreDEssai;i>0;i--){
-        let reponse =prompt(`Vous avez ${i} essais pour deviner le nombre entre 0 et 100 :`);
-        reponse=parseInt(reponse);
-        //console.log(reponse);
-        if(isNaN(reponse))alert("donner un entier valide");
-        else if (reponse ===LeNombreCache){alert("gagné"); break;}
-        else if (reponse<LeNombreCache){alert("trop petit");
-        }
-        else alert("trop grand");
-
-    }
+    jouer(nombreDEssai,100,LeNombreCache);
     let rejouer=prompt("reprondre le jeu? ecrire oui ou non");
     if (rejouer==="oui"){
         jeuIntermediaire();
@@ -77,17 +57,7 @@ function jeuDifficil(){
     const LeNombreCache=Math.floor(Math.random() * 250) ;
     console.log(LeNombreCache);
     const nombreDEssai=4;
-    for(i=nombreDEssai;i>0;i--){
-        let reponse =prompt(`Vous avez ${i} essais pour deviner le nombre entre 0 et 250 :`);
-        reponse=parseInt(reponse);
-        //console.log(reponse);
-        if(isNaN(reponse))alert("donner un entier valide");
-        else if (reponse ===LeNombreCache){alert("gagné"); break;}
-        else if (reponse<LeNombreCache){alert("trop petit");
-        }
-        else alert("trop grand");
-
-    }
+    jouer(nombreDEssai,250,LeNombreCache);
     let rejouer=prompt("reprondre le jeu? ecrire oui ou non");
     if (rejouer==="oui"){
         jeuDifficil();
@@ -99,4 +69,26 @@ function jeuDifficil(){
         alert("donner une reponse valide");
         rejouer=prompt("reprondre le jeu? ecrire oui ou non");
     }
+}
+
+function jouer(nombreDEssai, intervalMax, LeNombreCache){
+    for(i=nombreDEssai;i>0;i--){
+        let reponse =prompt(`Vous avez ${i} essais pour deviner le nombre entre 0 et ${intervalMax} :`);
+        reponse = reponse.trim();
+        if(isNaN(reponse)||reponse===""){alert("donner un entier valide"); reponse =prompt(`Vous avez ${i} essais pour deviner le nombre entre 0 et ${intervalMax} :`);};
+        console.log(reponse);
+        
+        reponse=parseInt(reponse);
+        console.log(reponse);
+        if(isNaN(reponse)){alert("donner un entier valide"); reponse =prompt(`Vous avez ${i} essais pour deviner le nombre entre 0 et 250 :`);};
+        if (reponse ===LeNombreCache){alert("gagné"); break;}
+        else if (reponse<LeNombreCache){alert("trop petit");
+        }
+        else alert("trop grand");
+        if (i === 1) {
+            alert(`Dommage ! Le nombre était ${LeNombreCache}.`);
+        }
+
+    }
+    
 }
